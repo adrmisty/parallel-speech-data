@@ -1,0 +1,3 @@
+*.zip filter=lfs diff=lfs merge=lfs -zip
+*.txt filter=lfs diff=lfs merge=lfs -txt
+*.wav filter=lfs diff=lfs merge=lfs -wav
