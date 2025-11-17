@@ -44,10 +44,12 @@ You will need the following to run the script:
 * tqdm
 * **FFmpeg**: This must be installed on your system and available in your PATH, as it is used via `subprocess` for audio conversion.
 
-You can install the Python dependencies using pip:
+
+You can install the Python dependencies using `pip`:
+
 ```bash
 pip install torch torchaudio tqdm
-
+```
 
 ### Running the Script
 The script is run from the command line and accepts several arguments to define the input and output paths.
@@ -71,6 +73,7 @@ python parallelizer.py \
 --target-root: Path to the directory containing the raw, full-length Greek .ogg audio files.
 
 --output-root: The directory where the script will save the newly segmented Greek .wav files.
+```
 
 #### Output
 The script will:
@@ -79,7 +82,10 @@ The script will:
 
 2. Generate a parallel_el-es.tsv file in the --output-root listing the file paths for each matched Greek and Spanish audio segment, ready for the transcription step.
 
+
+
 ---
+
 
 
 ## 📊 Results and Limitations
@@ -98,11 +104,11 @@ The primary bottleneck is the lack of computational resources. Transcription and
 To build upon this proof of concept, future efforts could include:
 
 
-- Scaling the Dataset: Process the full 2009-2020 Vox Populi dataset to transcribe and align all 2470+ identified pairs.
+- Scaling the dataset: Process the full 2009-2020 Vox Populi dataset to transcribe and align all 2470+ identified pairs.
 
-- Upgrading Alignment: Move from HunAlign to more robust neural alignment systems like SeamlessAlign or SONAR-based embeddings.
+- Upgrading alignment: Move from HunAlign to more robust neural alignment systems like SeamlessAlign or SONAR-based embeddings.
 
-- Releasing the Corpus: Publish the final, cleaned parallel corpus on a platform like HuggingFace or LINDAT to benefit the research community.
+- Releasing the corpus: Publish the final, cleaned parallel corpus on a platform like HuggingFace or LINDAT to benefit the research community.
 
 ---
 
